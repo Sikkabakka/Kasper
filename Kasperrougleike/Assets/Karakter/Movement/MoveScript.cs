@@ -7,6 +7,7 @@ public class MoveScript : MonoBehaviour
     public float movementspeed;
     public Rigidbody2D rb;
     private Vector2 move;
+    private float movespeed;
 
 
     // Update is called once per frame
@@ -19,13 +20,18 @@ public class MoveScript : MonoBehaviour
         Move();
     }
     void ProcessInputs(){
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
+        float moveX = Input.GetAxisRaw("Horizontal") * movementspeed;
+        float moveY = Input.GetAxisRaw("Vertical") * movementspeed;
+        // if ((moveX * moveY) != 0){
+        //     movespeed = movementspeed/2;
+        // } 
+        // else{
+        //     movespeed = movementspeed ;
+        // }
         move = new Vector2(moveX, moveY);
     }
     void Move()
     {
-        rb.velocity = new Vector2(move.x * movementspeed, move.y * movementspeed);
+        rb.velocity = new Vector2(move.x , move.y).normalized * movementspeed ;
     }
 }

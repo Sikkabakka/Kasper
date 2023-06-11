@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8544fc5565ae1a4ab6c9003ccd6ac1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementspeed: 10
+  movementspeed: 3
   rb: {fileID: 1219431599}
 --- !u!114 &1219431597
 MonoBehaviour:
@@ -341,6 +341,9 @@ MonoBehaviour:
   ShootPoint: {fileID: 1039533684}
   Bullet: {fileID: 1403243161}
   BulletSpeed: 200
+  ReadyToShoot: 0
+  waitTime: 0
+  PS: {fileID: 0}
 --- !u!61 &1219431598
 BoxCollider2D:
   m_ObjectHideFlags: 0
