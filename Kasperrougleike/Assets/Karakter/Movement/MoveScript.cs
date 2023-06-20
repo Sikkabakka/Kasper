@@ -8,6 +8,7 @@ public class MoveScript : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 move;
     private float movespeed;
+    public float moveX;
     
 
     // Update is called once per frame
